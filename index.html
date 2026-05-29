@@ -1,0 +1,1049 @@
+```html
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAVRIN DIZAJN j.d.o.o.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#0f0f0f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1280px;
+    margin:auto;
+}
+
+section{
+    padding:120px 0;
+    position:relative;
+}
+
+.gold{
+    color:#f3c86b;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px 36px;
+    border-radius:60px;
+    background:linear-gradient(135deg,#f8d57a,#d89c1f);
+    color:#111;
+    font-weight:700;
+    transition:0.35s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(243,200,107,0.25);
+}
+
+h1,h2,h3{
+    line-height:1.15;
+}
+
+h2{
+    font-size:52px;
+    margin-bottom:25px;
+}
+
+p{
+    line-height:1.8;
+    color:#d7d7d7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background:rgba(0,0,0,0.72);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.nav-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#f3c86b;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    color:#fff;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#f3c86b;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.72)),
+    url('https://images.pexels.com/photos/13729932/pexels-photo-13729932.jpeg') center/cover;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-content h1{
+    font-size:82px;
+    margin-bottom:30px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:35px;
+    max-width:700px;
+}
+
+.hero-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(243,200,107,0.18);
+    border-radius:30px;
+    padding:40px;
+    backdrop-filter:blur(8px);
+}
+
+.hero-card h3{
+    color:#f3c86b;
+    margin-bottom:18px;
+    font-size:28px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.stat-box{
+    background:#171717;
+    border-radius:22px;
+    padding:30px;
+    text-align:center;
+    border:1px solid rgba(243,200,107,0.12);
+}
+
+.stat-box h3{
+    font-size:38px;
+    color:#f3c86b;
+    margin-bottom:8px;
+}
+
+.center-title{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 70px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:#171717;
+    border-radius:28px;
+    padding:45px 35px;
+    transition:0.35s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:#f3c86b;
+}
+
+.service-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:25px;
+}
+
+.service-card h3{
+    color:#f3c86b;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.alt-section{
+    background:#151515;
+}
+
+.zigzag{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.zigzag img{
+    border-radius:28px;
+    height:550px;
+    object-fit:cover;
+}
+
+.feature-list{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    margin-top:35px;
+}
+
+.feature-item{
+    background:#1d1d1d;
+    border-left:4px solid #f3c86b;
+    padding:24px;
+    border-radius:0 18px 18px 0;
+}
+
+.feature-item h4{
+    color:#f3c86b;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.process-wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
+}
+
+.process-card{
+    background:#171717;
+    border-radius:28px;
+    padding:40px 30px;
+    position:relative;
+    overflow:hidden;
+}
+
+.process-number{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:70px;
+    font-weight:800;
+    color:rgba(243,200,107,0.08);
+}
+
+.process-card h3{
+    color:#f3c86b;
+    margin-bottom:18px;
+    position:relative;
+    z-index:2;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+
+.value-box{
+    background:#191919;
+    padding:38px;
+    border-radius:26px;
+    text-align:center;
+}
+
+.value-box h3{
+    color:#f3c86b;
+    margin-bottom:16px;
+}
+
+.cta-section{
+    background:
+    linear-gradient(135deg,rgba(243,200,107,0.95),rgba(209,144,17,0.95)),
+    url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80') center/cover;
+    text-align:center;
+    border-radius:40px;
+    padding:100px 50px;
+}
+
+.cta-section h2{
+    color:#111;
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.cta-section p{
+    color:#222;
+    max-width:800px;
+    margin:0 auto 35px;
+    font-size:20px;
+}
+
+.cta-section .btn{
+    background:#111;
+    color:#f3c86b;
+}
+
+.faq-grid{
+    display:grid;
+    gap:25px;
+}
+
+.faq-item{
+    background:#181818;
+    border-radius:24px;
+    padding:35px;
+}
+
+.faq-item h3{
+    color:#f3c86b;
+    margin-bottom:14px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:50px;
+}
+
+.contact-info{
+    background:#171717;
+    padding:50px;
+    border-radius:32px;
+}
+
+.contact-info h3{
+    color:#f3c86b;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.contact-image{
+    margin-top:35px;
+}
+
+.contact-image img{
+    border-radius:24px;
+    height:320px;
+    width:100%;
+    object-fit:cover;
+}
+
+.contact-form{
+    background:#171717;
+    border-radius:32px;
+    padding:50px;
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+input,textarea{
+    width:100%;
+    padding:18px;
+    border:none;
+    background:#242424;
+    border-radius:16px;
+    color:#fff;
+    font-size:15px;
+}
+
+textarea{
+    min-height:170px;
+    resize:vertical;
+}
+
+.error{
+    margin-top:8px;
+    color:#ff7d7d;
+    font-size:14px;
+}
+
+.success{
+    margin-top:15px;
+    color:#89ff9b;
+    font-size:15px;
+}
+
+footer{
+    padding:40px 0;
+    background:#0a0a0a;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+@media(max-width:980px){
+
+.hero-grid,
+.zigzag,
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.hero-content h1{
+    font-size:54px;
+}
+
+.zigzag img{
+    height:420px;
+}
+
+.menu{
+    display:none;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+h2{
+    font-size:40px;
+}
+
+section{
+    padding:90px 0;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav-wrapper">
+
+<div class="logo">
+MAVRIN DIZAJN
+</div>
+
+<div class="menu">
+<a href="#usluge">Usluge</a>
+<a href="#prednosti">Prednosti</a>
+<a href="#proces">Proces rada</a>
+<a href="#onama">O nama</a>
+<a href="#vrijednosti">Vrijednosti</a>
+<a href="#faq">FAQ</a>
+<a href="#kontakt">Kontakt</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-content">
+
+<h1>
+Gradimo snažan <span class="gold">digitalni identitet</span> za moderne tvrtke
+</h1>
+
+<p>
+MAVRIN DIZAJN j.d.o.o. pruža profesionalne usluge marketinga,
+SEO optimizacije, brandinga, grafičkog dizajna, tehničkog savjetovanja
+i IT podrške za rast i razvoj poslovanja.
+</p>
+
+<a href="#kontakt" class="btn">
+Zatražite konzultacije
+</a>
+
+<div class="stats">
+
+<div class="stat-box">
+<h3>100%</h3>
+<p>Posvećenost kvaliteti</p>
+</div>
+
+<div class="stat-box">
+<h3>24/7</h3>
+<p>Tehnička podrška</p>
+</div>
+
+<div class="stat-box">
+<h3>360°</h3>
+<p>Digitalna rješenja</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<h3>Vaš partner za digitalni rast</h3>
+
+<p>
+Kombiniramo kreativni pristup, moderno vizualno oblikovanje
+i tehnološka rješenja kako bismo vašem poslovanju osigurali
+prepoznatljivost, stabilnost i profesionalan nastup.
+</p>
+
+<p>
+Naš cilj je pružiti učinkovite usluge koje donose dugoročne rezultate,
+veću vidljivost i snažniji odnos s vašim klijentima.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="usluge">
+
+<div class="container">
+
+<div class="center-title">
+<h2>Naše usluge</h2>
+
+<p>
+Nudimo širok raspon digitalnih i kreativnih usluga
+prilagođenih suvremenim poslovnim potrebama.
+</p>
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/6483582/pexels-photo-6483582.jpeg" alt="">
+<h3>Digitalni marketing</h3>
+<p>
+Razvijamo strategije koje povećavaju online prisutnost,
+angažman korisnika i poslovne rezultate.
+</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/942331/pexels-photo-942331.jpeg" alt="">
+<h3>SEO optimizacija</h3>
+<p>
+Optimiziramo web sadržaj i strukturu za bolje pozicije
+na tražilicama i veću organsku vidljivost.
+</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/4219217/pexels-photo-4219217.jpeg" alt="">
+<h3>Branding</h3>
+<p>
+Gradimo autentičan identitet brenda koji ostavlja
+profesionalan i prepoznatljiv dojam.
+</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/17845/pexels-photo.jpg" alt="">
+<h3>Grafički dizajn</h3>
+<p>
+Kreiramo moderne vizuale, promotivne materijale
+i sadržaj za digitalne platforme.
+</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/34803972/pexels-photo-34803972.jpeg" alt="">
+<h3>IT podrška</h3>
+<p>
+Osiguravamo stabilnu tehničku podršku i pomoć
+u svakodnevnom poslovanju.
+</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/7532004/pexels-photo-7532004.jpeg" alt="">
+<h3>Tehničko savjetovanje</h3>
+<p>
+Pomažemo tvrtkama pri implementaciji modernih
+tehnoloških rješenja i optimizaciji procesa.
+</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/6229/marketing-board-strategy.jpg" alt="">
+<h3>Web strategija</h3>
+<p>
+Analiziramo tržište i razvijamo digitalne strategije
+za dugoročan rast poslovanja.
+</p>
+</div>
+
+<div class="service-card">
+<img src="https://images.pexels.com/photos/5915301/pexels-photo-5915301.jpeg" alt="">
+<h3>Vizualna komunikacija</h3>
+<p>
+Povezujemo dizajn, sadržaj i funkcionalnost
+u jedinstveno korisničko iskustvo.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="alt-section" id="prednosti">
+
+<div class="container zigzag">
+
+<div>
+<h2>Zašto odabrati nas</h2>
+
+<p>
+Naš pristup temelji se na profesionalnosti, kvaliteti i individualnom
+pristupu svakom projektu. Razumijemo važnost stabilnog i modernog
+digitalnog identiteta za uspjeh poslovanja.
+</p>
+
+<div class="feature-list">
+
+<div class="feature-item">
+<h4>Moderan pristup</h4>
+<p>
+Koristimo aktualne tehnologije i suvremene dizajnerske standarde.
+</p>
+</div>
+
+<div class="feature-item">
+<h4>Fokus na rezultate</h4>
+<p>
+Naša rješenja usmjerena su prema dugoročnom rastu i vidljivosti.
+</p>
+</div>
+
+<div class="feature-item">
+<h4>Pouzdana suradnja</h4>
+<p>
+Gradimo transparentan odnos i kontinuiranu komunikaciju s klijentima.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div>
+<img src="https://images.pexels.com/photos/4920515/pexels-photo-4920515.jpeg" alt="">
+</div>
+
+</div>
+
+</section>
+
+<section id="proces">
+
+<div class="container">
+
+<div class="center-title">
+<h2>Naš proces rada</h2>
+
+<p>
+Svaki projekt prolazi kroz jasno definirane faze
+kako bismo osigurali kvalitetu i učinkovitost.
+</p>
+</div>
+
+<div class="process-wrapper">
+
+<div class="process-card">
+<div class="process-number">01</div>
+<h3>Analiza</h3>
+<p>
+Detaljno analiziramo potrebe, ciljeve i tržište klijenta.
+</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">02</div>
+<h3>Planiranje</h3>
+<p>
+Kreiramo strategiju prilagođenu specifičnostima projekta.
+</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">03</div>
+<h3>Implementacija</h3>
+<p>
+Realiziramo dizajn, sadržaj i tehnička rješenja.
+</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">04</div>
+<h3>Optimizacija</h3>
+<p>
+Kontinuirano poboljšavamo rezultate i pružamo podršku.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="alt-section" id="onama">
+
+<div class="container zigzag">
+
+<div>
+<img src="https://images.pexels.com/photos/7869003/pexels-photo-7869003.jpeg" alt="">
+</div>
+
+<div>
+
+<h2>O našoj tvrtki</h2>
+
+<p>
+MAVRIN DIZAJN j.d.o.o. specijalizirana je za digitalna,
+kreativna i tehnička rješenja za suvremene tvrtke.
+</p>
+
+<p>
+Naš cilj je razvijati kvalitetne projekte koji povezuju
+tehnologiju, estetiku i funkcionalnost.
+</p>
+
+<p>
+Vjerujemo u dugoročnu suradnju, profesionalan pristup
+i kontinuirano unapređenje usluga.
+</p>
+
+<div class="feature-list">
+
+<div class="feature-item">
+<h4>Profesionalna izvedba</h4>
+<p>
+Svaki projekt realiziramo precizno i odgovorno.
+</p>
+</div>
+
+<div class="feature-item">
+<h4>Kreativna rješenja</h4>
+<p>
+Pronalazimo originalne ideje prilagođene vašem poslovanju.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="vrijednosti">
+
+<div class="container">
+
+<div class="center-title">
+<h2>Naše vrijednosti</h2>
+
+<p>
+Vrijednosti koje nas vode u svakodnevnom radu
+i suradnji s klijentima.
+</p>
+</div>
+
+<div class="values-grid">
+
+<div class="value-box">
+<h3>Inovacija</h3>
+<p>
+Pratimo trendove i implementiramo moderna digitalna rješenja.
+</p>
+</div>
+
+<div class="value-box">
+<h3>Kvaliteta</h3>
+<p>
+Posvećeni smo visokom standardu izvedbe i profesionalnosti.
+</p>
+</div>
+
+<div class="value-box">
+<h3>Povjerenje</h3>
+<p>
+Gradimo transparentne i dugoročne poslovne odnose.
+</p>
+</div>
+
+<div class="value-box">
+<h3>Razvoj</h3>
+<p>
+Kontinuirano unapređujemo znanje i kvalitetu naših usluga.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="alt-section">
+
+<div class="container">
+
+<div class="cta-section">
+
+<h2>
+Pokrenite svoj digitalni razvoj već danas
+</h2>
+
+<p>
+Kontaktirajte nas i saznajte kako možemo unaprijediti
+vaš brend, online prisutnost i poslovne rezultate.
+</p>
+
+<a href="#kontakt" class="btn">
+Kontaktirajte nas
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<div class="container">
+
+<div class="center-title">
+<h2>Često postavljena pitanja</h2>
+
+<p>
+Odgovori na najčešća pitanja naših klijenata.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>Koliko traje realizacija projekta?</h3>
+<p>
+Vrijeme realizacije ovisi o kompleksnosti i zahtjevima projekta.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Pružate li podršku nakon završetka projekta?</h3>
+<p>
+Da, nudimo kontinuiranu tehničku i savjetodavnu podršku.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Radite li s različitim vrstama poslovanja?</h3>
+<p>
+Surađujemo s manjim i većim tvrtkama iz različitih industrija.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Možete li prilagoditi usluge specifičnim potrebama?</h3>
+<p>
+Da, svako rješenje prilagođavamo ciljevima i potrebama klijenta.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="alt-section" id="kontakt">
+
+<div class="container">
+
+<div class="center-title">
+<h2>Kontaktirajte nas</h2>
+
+<p>
+Pošaljite upit i odgovorit ćemo vam u najkraćem mogućem roku.
+</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>Informacije</h3>
+
+<p>
+<strong>Adresa:</strong><br>
+Ilica 309 10000, Zagreb, Grad Zagreb Croatia
+</p>
+
+<p>
+<strong>E-mail:</strong><br>
+info@mavrindizajn.org
+</p>
+
+<div class="contact-image">
+<img src="https://images.pexels.com/photos/8621076/pexels-photo-8621076.jpeg" alt="">
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<form id="contactForm">
+
+<div class="form-group">
+<input type="text" id="name" placeholder="Ime i prezime">
+<div class="error" id="nameError"></div>
+</div>
+
+<div class="form-group">
+<input type="email" id="email" placeholder="E-mail adresa">
+<div class="error" id="emailError"></div>
+</div>
+
+<div class="form-group">
+<textarea id="message" placeholder="Vaša poruka"></textarea>
+<div class="error" id="messageError"></div>
+</div>
+
+<button type="submit" class="btn">
+Pošalji poruku
+</button>
+
+<div class="success" id="successMessage"></div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+<p>
+© 2026 MAVRIN DIZAJN j.d.o.o. — Sva prava pridržana.
+</p>
+</div>
+
+</footer>
+
+<script>
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(e){
+
+e.preventDefault();
+
+document.getElementById('nameError').innerText='';
+document.getElementById('emailError').innerText='';
+document.getElementById('messageError').innerText='';
+document.getElementById('successMessage').innerText='';
+
+let valid=true;
+
+const name=document.getElementById('name').value.trim();
+const email=document.getElementById('email').value.trim();
+const message=document.getElementById('message').value.trim();
+
+if(name===''){
+document.getElementById('nameError').innerText='Molimo unesite ime i prezime.';
+valid=false;
+}
+
+const emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+
+if(email===''){
+document.getElementById('emailError').innerText='Molimo unesite e-mail adresu.';
+valid=false;
+}
+else if(!emailPattern.test(email)){
+document.getElementById('emailError').innerText='Unesite ispravnu e-mail adresu.';
+valid=false;
+}
+
+if(message===''){
+document.getElementById('messageError').innerText='Molimo unesite poruku.';
+valid=false;
+}
+
+if(valid){
+
+document.getElementById('successMessage').innerText=
+'Vaša poruka je uspješno poslana. Kontaktirat ćemo vas uskoro.';
+
+form.reset();
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
+```
